@@ -1,0 +1,135 @@
+\documentclass[]{ctexart}
+\usepackage{amsmath,amssymb,graphicx,textcomp,subfigure,indentfirst,ctex,color,float}
+\usepackage{hyperref}
+\hypersetup{hidelinks,
+	colorlinks=true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true}
+
+\title{Title}
+\author{Siyi Zhao}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section*{Problem Set}
+
+\textbf{Problem 2. “Sandage-Loeb test”.} (3 credits)
+
+The so-called “Sandage-Loeb test” offers a direct measurement of the expansion
+rate of the Universe. For a light ray that was emitted at emission time $t_e$ and later observed at time $t_0$, the redshift
+$$1+z=\frac{a\left(t_{0}\right)}{a\left(t_{e}\right)},$$
+where $a\left(t\right)$ is the scale factor at the time $t$. If an observer keeps observing for a (\emph{very large}) duration of time $dt_0$, then there will be a change of observed redshift $dz$.
+\\(1) Derive the change rate $d z / d t_{0}$  in terms of $H_0$, $z$, and Hubble parameter $H(z)$. [Hint: as the time of observation $t_0$ changes to $t_0 + dt_0$, we observe light that was also emitted at a later time $t_e + dt_e$. What is the relation of $dt_e$ and $dt_0$? You may consider a wavelet of light rays with the length $c\ dt_e$ at the time of emission. It will be redshifted to the length $c\ dt_0$ at the time of observation.]
+\\(2) In the $\Lambda$CDM model, the Hubble parameter is
+$$
+H(z)=H_{0} \sqrt{\Omega_{\Lambda}+\Omega_{m}(1+z)^{3}++\Omega_{K}(1+z)^{2}++\Omega_{\gamma}(1+z)^{4}} .
+$$ 
+Assume $\Omega_{K}=0$, $\Omega_{\gamma} \approx 0$, $\Omega_{m}=0.3$, $\Omega_{\Lambda}=0.7$ and $H_{0}=70 \mathrm{~km} / \mathrm{s} / \mathrm{Mpc}$. You
+observe a galaxy at $z = 1$. Determine how long (in years) you will have to keep observing the galaxy in order to see its redshift change $|d z|=10^{-6}$. Is $d z<0$  or $d z>0$ ?
+
+\section{宇宙成分组成}
+
+\subsection{who}
+
+\subsubsection{哈勃参数}
+
+
+$$\begin{aligned} \vec{v}(t)=\frac{d \vec{x}}{d t} &=x\left(t_{0}\right) \frac{1}{a\left(t_{0}\right)} d a / d t \\ &=x\left(t_{0}\right) \frac{a(t)}{a\left(t_{0}\right)} \frac{d a / d t}{a(t)} \end{aligned}$$
+
+定义哈勃参数 $H(t) \equiv \frac{da/dt}{a} = \frac{\dot{a}}{a}$，可以得到哈勃定律 $\vec{V}(t)=\vec{x}(t)H(t)$，所以 $H_0$ 就是今天的哈勃参数。
+
+
+因为历史原因， $H_0 = 100 h^{-1} \mathrm{~km} \mathrm{~s}^{-1} \mathrm{~Mpc}^{-1}$ ， $h \simeq 0.7$ ，更精确的测量出现 Hubble tension 问题。
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\begin{equation} \label{eq}
+    \mathrm{GeV} M_{\mathrm{Pl}} \left\langle \hat{a}^{\dagger} \right\rangle \{1\cdots n\} a \implies b   \ddot{a} \to 0 
+\end{equation}
+
+\begin{equation*}
+    \hbar \notin \mathbb{R} 
+\end{equation*}
+
+\ref{eq}
+
+\href{http://astro.tsinghua.edu.cn/~wzhu/student-seminar-2022/index.html}{2022 Spring student seminar}
+
+
+
+\section{PNG21cm}
+
+\subsection{bias meaurement}
+
+\begin{equation}
+    \delta_{x_\mathrm{HI}}(\boldsymbol{x}) = \frac{x_\mathrm{HI}(\boldsymbol{x})}{\bar{x}_\mathrm{HI}} - 1
+\end{equation}
+
+\begin{equation}
+    \delta_{\rho_{\mathrm{HI}}}(\boldsymbol{x}) = \delta_m(\boldsymbol{x}) + \delta_{x_\mathrm{HI}}(\boldsymbol{x}) + \delta_m(\boldsymbol{x}) \delta_{x_\mathrm{HI}}(\boldsymbol{x})
+\end{equation}
+
+\begin{equation}
+    H = \frac{L_\mathrm{box}}{N_\mathrm{cell}}
+\end{equation}
+
+\begin{equation*}
+    \delta_{\rho_{\mathrm{HI}}}(\boldsymbol{x})=b_{1} \delta_{m}(\boldsymbol{x})+\frac{1}{2} b_{2} \delta_{m}^{2}(\boldsymbol{x})
+\end{equation*}
+
+
+
+\subsection{Theoritical prediction of bispectrum}
+
+\begin{eqnarray}
+    x_\mathrm{HII} &=& 1 - x_\mathrm{HI} \\ 
+    b_\mathrm{HII}^\mathrm{G} &=& \frac{1 - b_1 x_\mathrm{HI} }{x_\mathrm{HII}} 
+\end{eqnarray}
+
+
+
+
+
+
+
+\section{“星系与宇宙”助教笔记}
+
+\subsection{有趣的问题}
+
+Q1:为什么宇宙的年龄是哈勃常数的倒数？
+\begin{itemize}
+    \item 解弗里德曼方程，
+    \begin{itemize}
+        \item 物质主导的宇宙解出 $a \propto t^\frac{2}{3}$ ， 那么 $H=\frac{\dot{a}}{a}=\frac{2}{3t}$ ，在今天取值 $t_0 = \frac{2}{3 H_0}$。
+        \item 辐射主导的宇宙解出 $a \propto t^\frac{1}{2}$ ， 那么 $H=\frac{\dot{a}}{a}=\frac{1}{2t}$ ，在今天取值 $t_0 = \frac{1}{2 H_0}$。
+        \item generally, $a \propto t^\frac{2}{3(w+1)}$ ， 那么 $H=\frac{\dot{a}}{a}=\frac{2}{3(w+1) t}$ ，在今天取值 $t_0 = \frac{2}{3(w+1) H_0}$。
+    \end{itemize}
+    \item 定性地可以理解为：宇宙以多项式的形式膨胀 $a \propto t^n$ （在大多数时间是的，inflation的时候不是）， $H=\frac{\dot{a}}{a}\propto \frac{1}{t}$ 
+\end{itemize}
+
+QN:
+\begin{itemize}
+    \item 牛顿力学在均匀无限大宇宙中存在矛盾：$\nabla \cdot \mathbf{g}=-4 \pi G \rho$， $\mathbf{g} \equiv 0$, while $\rho \neq 0$ 
+\end{itemize}
+
+
+
+\subsection{宇宙学部分参考书目推荐：}
+
+\begin{itemize}
+    \item Astrophysics for Physicists--Choudhuri.pdf Chp 10, 11,15(?)
+\end{itemize}
+
+% \cite{daloisio2013dbk}
+
+% \bibliographystyle{aasjournal}
+% \bibliography{main}
+
+\end{document}
