@@ -3,7 +3,8 @@
 \title{Lecture 4}
 \author{赵思逸}
 
-\date{2022年3月15日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
 
@@ -11,16 +12,25 @@
 
 \maketitle
 
+\new{\section*{CMB坐标系}}
+
+
+\new{
+我们上节课得到的FRW度规基于“宇宙学坐标系”，在实际操作层面，我们用相对于CMB静止的坐标系作为“宇宙学坐标系”。  
+太阳绕CMB运动的dipole速度经测量为370km/s，在CMB上体现为 $\frac{v}{c} \sim 10^{-3}$ 的涨落。
+虽然我们的太阳系并不是“宇宙学坐标系”，但仍不影响我们使用FRW度规研究宇宙学，类似于在平地上研究火车上的物理学，只差一个坐标变换。
+}
 
 \section{宇宙学中的距离}
 
 \subsection{角直径距离(angular diameter distance) $d_A$ }
 
 给定“标准尺子”（物理长度固定为$l$且已知）。
-
 在静止宇宙中，距离 $r = l/\theta$ ，其中 $\theta$ 是“标准尺子”的张角。
-
-一般情况下，定义角直径距离 $d_A \equiv l/\theta$。
+一般情况下，定义角直径距离
+\begin{equation}
+    d_A \equiv l/\theta
+\end{equation}
 
 在膨胀的平直宇宙（K=0）中，假设“标准尺子”在t时刻发出的光今天被我们看到。
 因为宇宙均匀膨胀，$\theta$角固定不变。
@@ -31,7 +41,7 @@
     \theta = \frac{l}{a(t)r} = \frac{l a_0/a(t)}{a_0 r}
 \end{equation}
 \begin{equation}
-    d_A \equiv \frac{l}{\theta} = a(t)r
+    d_A \equiv \frac{l}{\theta} = \frac{a(t)}{a_0} a_0 r = a(t) r
 \end{equation}
 
 \subsection{光度距离(luminosity distance) $d_L$ }
@@ -39,10 +49,11 @@
 假设某标准烛光(standard candle)发出单频光，
 已知其亮度 $L=\frac{\Delta E}{\Delta t} = \frac{h\nu \Delta N}{\Delta t}$,
 观测到流量 $F=\frac{\Delta L}{\Delta A} = \frac{L}{4\pi r^2}$.
-
 在静止宇宙中，该标准烛光的距离为 $r=\sqrt{\frac{L}{4\pi F}}$.
-
-一般情况下，定义光度距离 $d_L \equiv \sqrt{\frac{L}{4\pi F}}$.
+一般情况下，定义光度距离
+\begin{equation}
+    d_L \equiv \sqrt{\frac{L}{4\pi F}}
+\end{equation}
 
 在膨胀的平直宇宙（K=0）中，假设标准烛光在t时刻发出的光今天被我们看到。
 其亮度$L=\frac{\Delta E_\text{em}}{\Delta t_\text{em}} = \frac{h\nu_\text{em} \Delta N_\text{em}}{\Delta t_\text{em}}$。
@@ -52,11 +63,14 @@ $\Delta N$不变的情况下，由于宇宙膨胀，接受这些光子所需的�
 导致$\Delta E = h\nu\Delta N=\frac{a(t)}{a_0}h \nu_\text{em} \Delta N_\text{em}$。
 
 观测到的亮度 $L_\text{obs}=\frac{\Delta E}{\Delta t}=\left(\frac{a(t)}{a_0}\right)^2 L$，
-观测到的流量 $F=\frac{L_\text{obs}}{4\pi (ra_0)^2}=\left(\frac{a(t)}{a_0}\right)^2 \frac{L}{4\pi r^2 a_0^2}$ 。
+观测到的流量
+\begin{equation}
+    F=\frac{L_\text{obs}}{4\pi (ra_0)^2}=\left(\frac{a(t)}{a_0}\right)^2 \frac{L}{4\pi r^2 a_0^2}
+\end{equation}
 
 得到光度距离
 \begin{equation}
-    d_L\equiv\sqrt{\frac{L}{4\pi F}}= \left(\frac{a_0}{a(t)}\right)a_0 r
+    d_L\equiv\sqrt{\frac{L}{4\pi F}}= \left(\frac{a_0}{a(t)}\right)a_0 r 
 \end{equation} 
 
 \subsection{弯曲宇宙中的距离}
@@ -72,6 +86,12 @@ $\Delta N$不变的情况下，由于宇宙膨胀，接受这些光子所需的�
     d_A\equiv \frac{l}{d\theta} = \frac{ds}{d\theta} = a(t)r
 \end{equation}
 
+\begin{figure}[!hbtp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/d_A.png}
+    \caption{弯曲空间中的角直径距离示意图，观测者在极点。}
+\end{figure}
+
 对于一个立体角， $dt=dr=0$ ， $ds^2=a^2(t)r^2d\Omega^2$ ，球面积 $=a^2(t) 4\pi r^2$ 
 \begin{equation}
     F = \frac{L_\text{obs}}{a_0^2 4\pi r^2}
@@ -80,6 +100,14 @@ $\Delta N$不变的情况下，由于宇宙膨胀，接受这些光子所需的�
     d_L\equiv \frac{a_0}{a}a_0 r
 \end{equation}
 
+\begin{figure}[!hbtp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/d_L.png}
+    \caption{弯曲空间中的光度距离示意图吗，光源在极点。}
+\end{figure}
+
+
+\subsection*{consistency check}
 由 $d_A$ 和 $d_L$ 可以得到与宇宙学模型无关的“consistency check”：
 \begin{equation}
     \frac{d_A}{d_L} = \left(\frac{a}{a_0}\right)^2 = \frac{1}{(1+z)^2}
@@ -125,20 +153,5 @@ $\Delta N$不变的情况下，由于宇宙膨胀，接受这些光子所需的�
 
 使用\refeq{eq:z2chi}可以计算任意红移下的距离，注意其中$H(z^\prime)$具体的形式与宇宙学模型有关，接下来的课我们会讲$H(z^\prime)$的具体形式是什么。
 
-\section{弗里德曼(Friedmann)方程}
 
-广义相对论给出爱因斯坦引力场方程
-\begin{equation} \label{eq:field}
-    G_{\mu \nu} = 8 \pi G T_{\mu \nu}
-\end{equation}
-该公式左边是爱因斯坦张量(Einstein tensor)，表示时空的几何性质，右边的$T_{\mu\nu}$是能动量张量(Energy-momentum tensor)，由密度$\rho$、压强$P$决定，描述物质的分布。
-
-由\refeq{eq:field}可以得到关于$a(t)$的方程，即弗里德曼(Friedmann)方程
-\begin{eqnarray}
-    &&\dot{a}^2+K = \frac{8}{3} \pi G \rho a^2 \label{eq:adot} \\
-    &&\frac{\ddot{a}}{a} = -\frac{4}{3} \pi G (\rho + 3P)
-\end{eqnarray}
-其中$G$是牛顿引力常数，$\rho$是宇宙中物质的密度， $P$是宇宙中物质的压强。 
-
-由\refeq{eq:adot}可推出哈勃参数的表达式$H(a)=\sqrt{\frac{8}{3}\pi G \rho(a)-\frac{K}{a^2}}$
 \end{document}

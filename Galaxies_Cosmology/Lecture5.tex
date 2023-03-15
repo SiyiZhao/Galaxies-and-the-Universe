@@ -11,6 +11,23 @@
 
 \maketitle
 
+\section{弗里德曼(Friedmann)方程}
+
+广义相对论给出爱因斯坦引力场方程
+\begin{equation} \label{eq:field}
+    G_{\mu \nu} = 8 \pi G T_{\mu \nu}
+\end{equation}
+该公式左边是爱因斯坦张量(Einstein tensor)，表示时空的几何性质，右边的$T_{\mu\nu}$是能动量张量(Energy-momentum tensor)，由密度$\rho$、压强$P$决定，描述物质的分布。
+
+由\refeq{eq:field}可以得到关于$a(t)$的方程，即弗里德曼(Friedmann)方程
+\begin{eqnarray}
+    &&\dot{a}^2+K = \frac{8}{3} \pi G \rho a^2 \label{eq:adot} \\
+    &&\frac{\ddot{a}}{a} = -\frac{4}{3} \pi G (\rho + 3P)
+\end{eqnarray}
+其中$G$是牛顿引力常数，$\rho$是宇宙中物质的密度， $P$是宇宙中物质的压强。 
+
+由\refeq{eq:adot}可推出哈勃参数的表达式$H(a)=\sqrt{\frac{8}{3}\pi G \rho(a)-\frac{K}{a^2}}$
+
 
 \section{ Friedmann 方程}
 
