@@ -11,111 +11,50 @@
 
 \maketitle
 
+\section{视界(Horizon)}
 
-\section{宇宙学常数和真空能}
-
-\subsection{真空能视角}
-真空能 $P=-\rho$.
-
-\begin{equation} 
-    T^\mu_{\nu} = \left(\begin{array}{llll}-\rho & 0 & 0 & 0 \\ 0 & P & 0 & 0 \\ 0& 0& P &0 \\ 0 & 0&0&P\end{array}\right) = -\rho \delta^\mu_{\nu}
-\end{equation}
-得到真空能的能动量张量 $T_{\mu\nu}^{(\Lambda)}=- \rho_\Lambda g_{\mu\nu}$.
-
-Einstein场方程 $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = -8\pi G T_{\mu\nu}$.
-其中 $R_{\mu\nu}$ 是 Ricci tensor,  $R$ 是 Ricci scalar, 二者都是  $g_{\mu\nu}$ 及其导数的函数。
-
-$T_{\mu\nu}$ 是能动量张量，包括物质和辐射（下式第一项）和真空能（下式第二项）
+\subsection{粒子视界 (partcle horizon)}
+粒子视界 (partcle horizon) ：对于过去的事件所能观测到的最远距离。或在 $t$ 时刻看到的最远宇宙在 $t$ 时刻的距离。
 
 \begin{equation}
-    T_{\mu\nu} = T_{\mu\nu}^{(M)} + T_{\mu\nu}^{(\Lambda)} = T_{\mu\nu}^{(M)} - \rho_\Lambda g_{\mu\nu}
+    d_{ph}(t) = a(t) \int_0^t \frac{cdt'}{a(t')} 
 \end{equation}
 
-此时场方程变成 
-\begin{equation} \label{Eeq.vacuum}
-    R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = -8\pi G T_{\mu\nu} =  -8\pi G T_{\mu\nu}^{(M)} +  8\pi G \rho_\Lambda g_{\mu\nu}
-\end{equation}
-
-\subsection{宇宙学常数视角}
-Einstein场方程是由作用量导出的。作用量$S$为
-
+在今天，
 \begin{equation}
-    S = \int d^4 x \sqrt{-g} \mathcal{L} 
+    d_{ph}(t_0) = \frac{c}{H_0}\int_0^1 \frac{da'}{a'^2 \sqrt{\Omega_R a'^{-4}+\Omega_M a'^{-3}+\Omega_\Lambda+\Omega_K a'^{-2}} }
 \end{equation}
-其中 $d^4 x \sqrt{-g}$ 是4维协变的体积元，$\mathcal{L}$ 是拉氏量密度，要求 
+
 \begin{itemize}
-    \item[1.] 是4维坐标变换下的不变量。
-    \item[2.] 包含度规的最高2阶导数。
+    \item 对于辐射为主的宇宙， $a\propto t^{1/2}$, $d_{ph}(t_0)=2t_0 = D_H$.
+    \item 对于冷物质为主的宇宙， $a\propto t^{2/3}$, $d_{ph}(t_0)=3t_0 = 2 D_H$. 
 \end{itemize}
 
-只有Ricci scalar同时满足这两个条件，还有一个平凡(trivial)解——常数。 把宇宙学常数加到作用量里：
-\begin{equation}
-    S = \int d^4 x \sqrt{-g} \left( R  + \Lambda \right) 
-\end{equation}
-导出的场方程为
-\begin{equation}
-    R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R - \Lambda g_{\mu\nu} =  -8\pi G T_{\mu\nu}^{(M)} 
-\end{equation}
-
-与 \refeq{Eeq.vacuum} 相比，可得
-\begin{equation}
-    \Lambda = 8\pi G \rho_\Lambda 
-\end{equation}
-
-真空能与宇宙学常数是等价的。只不过真空能的引入有一些量子场论中的动机，而宇宙学常数则来自对广义相对论的Einstein场方程理论上的推广。下面我们将混用“真空能”和“宇宙学常数”。
-
-\subsection{Einstein静态宇宙模型}
-
-静态宇宙模型要求 $a$ 为常数，$\dot{a}=\ddot{a}=0$，带入弗里德曼方程得到
-\begin{eqnarray}
-    \rho+3P&=&0 \\
-    K &=& \frac{8}{3} \pi G \rho a^2
-\end{eqnarray}
-
-如果只有物质和辐射，$\rho+3P>0$，所以Einstein在1917年引入了宇宙学常数。以下推导使用真空能，且忽略辐射。
-\begin{equation}
-    \begin{aligned}
-    &\rho=\rho_{M}+\rho_{\Lambda}\\
-    &P=P_{M}+P_{\Lambda}=-\rho_{\Lambda}\\
-    &\rho+3 P = 0 \\
-    & \Rightarrow \rho_{\Lambda}=\frac{1}{2} \rho_{M}
-    \end{aligned}
-\end{equation}
+\subsection{事件视界(event horizon)}
+事件视界(event horizon)：未来的观测者所能看到的在 $t$ 时刻或以后的事件在 $t$ 时刻的最远距离。
 
 \begin{equation}
-    K=\frac{8}{3} \pi G \rho a_{E}^{2}=8\pi G \rho_\Lambda a_{E}^{2}>0
+    d_{eh}(t) = a(t) \int_t^\infty \frac{cdt'}{a(t')} 
 \end{equation}
 
-所以是正曲率，$K=+1$,
+\begin{itemize}
+    \item 对于冷物质为主的宇宙， $a\propto t^{2/3}$, $d_{eh}\to \infty$. 
+    \item 若 $\Lambda$ 为主， $a\propto e^{Ht}$ , $H=H_0 \Omega_\Lambda^{1/2}$,  $d_{eh}\to \frac{c}{H}$ 常数，足够时间以后，只有引力束缚的本星系群能看到。 
+\end{itemize}
 
+\subsection{}
+从  $t$ 时刻发出的信号 在未来 $T$ 时刻所能到达的最远距离
 \begin{equation}
-    a_E = 1/\sqrt{8\pi G \rho_\Lambda}
+    \lim_{T \to \infty}   a(T) \int_t^T \frac{cdt'}{a(t')} = d_{eh} \frac{a(T)}{a(t)}
 \end{equation}
 
-但这个解不稳定。我们做微扰：
-\begin{eqnarray}
-    a&=&a_{E}+\delta a \\ 
-    \rho_{M}&=&2 \rho_\Lambda+\delta \rho \\ 
-\end{eqnarray}
+若 $\Lambda$ 为主， $a\propto e^{Ht}$ , $H=H_0 \Omega_\Lambda^{1/2}$,  $d_{eh}\to \frac{c}{H}$ 常数，但 $a(T)\to \infty$，所以我们发出的信号可以到达无限远。 
 
-要总满足
-\begin{equation}
-    1=\frac{8}{3} \pi G \rho a^{2}
-\end{equation}
-
-\begin{equation}
-    \delta a<0 \Rightarrow \delta \rho>0 
-\end{equation}
-使得 $\dot{a}=0$ 继续满足，但二阶导
-
-\begin{equation}
-    \frac{3 \ddot{a}}{a}=-4 \pi G(\rho+3 P)=-4 \pi G\left(3 \rho_\Lambda+\delta \rho-3 \rho_\Lambda\right)=-4 \pi G \delta \rho<0
-\end{equation}
-
-$\delta a<0  \Rightarrow \ddot{a}<0$，
-$\delta a>0  \Rightarrow \ddot{a}>0$，
-即静态模型不稳定。
-
+\begin{figure}[!hbtp]
+	\centering
+	\includegraphics[width=1.0\linewidth]{horizon.jpg}
+	\caption{视界}
+\end{figure}
 
 \section{早期宇宙的历史}
 

@@ -3,45 +3,91 @@
 \title{Lecture 6}
 \author{赵思逸}
 
-\date{2022年3月29日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
+\newcommand{\reffig}[1]{图~(\ref{#1})}
 
 \begin{document}
 
 \maketitle
 
-
-\section{回顾}
-
+\new{
+上节课我们说到：
+最一般情况下，
+Friedmann方程
+\begin{equation}
+    \dot{a}^2+K = \frac{8}{3} \pi G \rho a^2
+\end{equation}
+其中 
+\begin{eqnarray}
+    \rho(a) &=& \rho_R(a) + \rho_M(a) + \rho_\Lambda (a) \label{eq:rho}
+    \\ &=& \rho_{R,0}\left(\frac{a}{a_0}\right)^{-4} + \rho_{M,0}\left(\frac{a}{a_0}\right)^{-3}  + \rho_{\Lambda,0}     
+\end{eqnarray}
+定义临界密度 $\rho_\text{crit} \equiv \frac{3H_0^2}{8\pi G}$.
+则
 Friedmann方程改写为 $H(t)= H_0 E(t)$,   其中 
 \begin{equation}
-    E(a)=\sqrt{\Omega_R(a/a_0)^{-4}+\Omega_M(a/a_0)^{-3}+\Omega_\Lambda+\Omega_K(a/a_0)^{-2}}
+    \frac{H}{H_0} = \sqrt{\frac{\rho}{\rho_\text{crit}}-\frac{K}{H_0^2 a^2}} =\sqrt{\Omega_R\left(\frac{a}{a_0}\right)^{-4}+\Omega_M\left(\frac{a}{a_0}\right)^{-3}+\Omega_\Lambda+\Omega_K\left(\frac{a}{a_0}\right)^{-2}}
 \end{equation}
-还可以写成
+或者写成
+$H(z)=H_0 E(z)$
 \begin{equation}
-    E(z)=\sqrt{\Omega_R(1+z)^{4}+\Omega_M(1+z)^{3}+\Omega_\Lambda+\Omega_K(1+z)^{2}}
+    E(z) = \sqrt{ \Omega_R \left(1+z\right)^{4} + \Omega_M \left(1+z\right)^{3} + \Omega_\Lambda + \Omega_K \left(1+z\right)^{2} }
 \end{equation}
-
-广义的物质包含冷物质、辐射、暗能量，$i=M,R,\Lambda$，今天各物质成分占比 $\Omega_i\equiv\frac{\rho_{i,0}}{\rho_\text{crit}}$, $\rho_\text{crit}\equiv\frac{3H_0^2}{8\pi G}$.
-
-曲率“密度” $\Omega_K\equiv-\frac{Kc^2}{H_0^2a_0^2}$是形式上的，不是实质的物质。
+其中我们定义了
+今天各物质成分占比 $\Omega_i\equiv\frac{\rho_{i,0}}{\rho_\text{crit}}$, 
+广义的物质包含冷物质、辐射、暗能量，$i=M,R,\Lambda$.
+还定义了
+}
+曲率“密度” 
+\begin{equation}
+    \Omega_K\equiv-\frac{Kc^2}{H_0^2a_0^2}
+\end{equation}
+\new{这个式子}是形式上的，不是实质的物质。
 \begin{itemize}
     \item 对 $K=0$, $\Omega_K=0$, $a_0$可以随意定义，一般定义为 $a_0=1$.
     \item 对 $K\neq0$, 通过选取共动坐标使得 R（共动）=1，使得$K=\pm 1$，今天的尺度因子 $a_0=$R（今天）/R（共动）= R（今天），不能随意选取 $a_0$. $|\Omega_K|=\frac{c^2}{H_0^2a_0^2}$ 可以连续变化。现有观测$|\Omega_K|< 10^{-2}\sim 10^{-3}$.
 \end{itemize} 
 
-根据定义
+在今天， $z=0$, $a=a_0$ , $H=H_0$,有
 \begin{equation}
     \Omega_R + \Omega_M + \Omega_\Lambda + \Omega_K = 1 \label{eq:allOmega}
 \end{equation}
-定义 $\Omega=\Omega_R + \Omega_M + \Omega_\Lambda = \rho_0/\rho_\text{crit}$, 则曲率被确定为 $\Omega_K = 1-\Omega$.  实际上通过测量 $\Omega$，得到 $\Omega_K$，可以计算
+
+注意最后一项 $\Omega_K$ 并不是真实的物质，只是我们用曲率定义出来的量。它决定我们对尺度因子的选取，只有当$\Omega_K = 0$时，我们才能选取$a_0=1$，当$\Omega_K\neq 0$时，
 \begin{equation}
     a_0=\frac{c}{H_0\sqrt{|\Omega_K|}} 
 \end{equation} 
 
+
+\refeq{eq:allOmega}中，前三项才是宇宙中真实存在的物质，（见\refeq{eq:rho}）它们的总和不一定是1。
+不过宇宙学观测得到的结果 $\Omega_K \approx 0$，可以认为我们的宇宙近似是平坦的。（即使不平坦，宇宙的曲率也非常小。暴涨理论会对这一现象给出解释。） 
+即$\rho_\text{crit}\simeq\rho_0$ ，所以$\Omega_i$也可以近似表示今天各物质成分在宇宙密度中的占比。
+
+小结：
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $\rho_0>\rho_\text{crit}$  & $\Omega>1$ & $\Omega_K<0$ & $K=+1$ & 正曲率，球面，有限无界 \\ \hline
+    $\rho_0<\rho_\text{crit}$  & $\Omega<1$ & $\Omega_K>0$ & $K=-1$ & 负曲率，超球面，无限无界  \\ \hline
+    $\rho_0=\rho_\text{crit}$  & $\Omega=1$ & $\Omega_K=0$ & $K=0$ & 平直，平直，无限无界 \\ \hline
+    \end{tabular}
+\end{table}
+其中前两列是广义物质密度，第3、4列是曲率，第5列描述宇宙的时空几何。
+\new{
+$K=+1$时，物质主导的宇宙先膨胀后收缩；
+$K=0$或$K=-1$时，物质主导的宇宙一直减速膨胀；
+但有暗能量存在时，宇宙在足够晚期会进入加速膨胀。
+}
+
+\new{今天的标准宇宙学模型就是要测量 $\Omega_R$, $\Omega_M$, $\Omega_\Lambda$, $\Omega_K$ 还有 $H_0$ 这些参数。
+当模型确定后，就可以知道时间、距离、红移、尺度因子之间的对应关系。}
+
 \section{时间和距离}
-\subsection{宇宙年龄}
+\subsection{宇宙年龄\new{（age）}}
 
 \begin{eqnarray}
     t_\text{age}(z) &=& \int_0^{t_\text{age}} dt' = \frac{1}{H_0}\int_0^\frac{1}{1+z} \frac{da'}{a' E(a')} \\ 
@@ -121,49 +167,137 @@ $r$ 将可测量量 $d_A$ 和 $d_L$ 与  $\chi$ 联系起来。通过测量 $d_A
     \item $\Omega_M=0.3, \Omega_\Lambda=0$, 推出 $\Omega_K=0.7>0, K=-1, S_k(x)=\sinh x$，\\ 在 $z=1$ 的地方，\\ $\frac{\Delta \theta}{\Delta z}=\frac{\sqrt{0.7}}{\sqrt{0.3\times 2^3 + 0.7\times 2^2}}\left[\sinh(\sqrt{0.7}  \int_{0}^{1} \frac{d z^{\prime}}{\sqrt{0.3(1+z')^3 + 0.7 (1+z')^2}})\right]^{-1}=0.640.$  
 \end{itemize}
 
-\section{视界(Horizon)}
 
-\subsection{粒子视界 (partcle horizon)}
-粒子视界 (partcle horizon) ：对于过去的事件所能观测到的最远距离。或在 $t$ 时刻看到的最远宇宙在 $t$ 时刻的距离。
+\section{宇宙学常数和真空能}
 
+\new{注意：这整个section是新加的}
+
+量子场论中，真空有基态能量 $\frac{1}{2}\hbar \omega$, 但广义相对论中能量零点的选取不是任意的。 
+
+真空能拥有“随着宇宙膨胀密度不变”的性质，因此具有负压 $P=-\rho_\Lambda$。
+代入能动量张量 $T_{\mu \nu}$ 中，我们发现 
 \begin{equation}
-    d_{ph}(t) = a(t) \int_0^t \frac{cdt'}{a(t')} 
+    T_{\mu \nu} = - \rho_\Lambda
+    g_{\mu \nu}
 \end{equation}
 
-在今天，
+Einstein场方程由对作用量(action)做变分得到。
+作用量允许出现一个常数 $\Lambda$, 
 \begin{equation}
-    d_{ph}(t_0) = \frac{c}{H_0}\int_0^1 \frac{da'}{a'^2 \sqrt{\Omega_R a'^{-4}+\Omega_M a'^{-3}+\Omega_\Lambda+\Omega_K a'^{-2}} }
+    S = \int d^4 x \sqrt{-g} (R + \Lambda)
+\end{equation}
+则场方程左边可以多出一项 $\Lambda g_{\mu \nu}$,
+\begin{equation}
+    R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} + \Lambda g_{\mu \nu}= 8 \pi G T_{\mu \nu}
+\end{equation}
+将这一项挪到右边，并令 $\Lambda = 8 \pi G \rho_\Lambda$, 就可以把这项作为“真空能”并入能动量张量中。
+
+所以人们经常把“真空能”和“宇宙学常数”$\Lambda$混称。
+Einstein是为了得到一个静止宇宙的模型而提出的 $\Lambda$，后来发现哈勃定律后，Einstein 认为这是他 “最大的错误”。
+实际上，Einstein 的宇宙学模型还有一个致命的缺陷就是不稳定。
+
+\section{宇宙学常数和真空能}
+
+\subsection{真空能视角}
+真空能 $P=-\rho$.
+
+\begin{equation} 
+    T^\mu_{\nu} = \left(\begin{array}{llll}-\rho & 0 & 0 & 0 \\ 0 & P & 0 & 0 \\ 0& 0& P &0 \\ 0 & 0&0&P\end{array}\right) = -\rho \delta^\mu_{\nu}
+\end{equation}
+得到真空能的能动量张量 $T_{\mu\nu}^{(\Lambda)}=- \rho_\Lambda g_{\mu\nu}$.
+
+Einstein场方程 $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = -8\pi G T_{\mu\nu}$.
+其中 $R_{\mu\nu}$ 是 Ricci tensor,  $R$ 是 Ricci scalar, 二者都是  $g_{\mu\nu}$ 及其导数的函数。
+
+$T_{\mu\nu}$ 是能动量张量，包括物质和辐射（下式第一项）和真空能（下式第二项）
+
+\begin{equation}
+    T_{\mu\nu} = T_{\mu\nu}^{(M)} + T_{\mu\nu}^{(\Lambda)} = T_{\mu\nu}^{(M)} - \rho_\Lambda g_{\mu\nu}
 \end{equation}
 
+此时场方程变成 
+\begin{equation} \label{Eeq.vacuum}
+    R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = -8\pi G T_{\mu\nu} =  -8\pi G T_{\mu\nu}^{(M)} +  8\pi G \rho_\Lambda g_{\mu\nu}
+\end{equation}
+
+\subsection{宇宙学常数视角}
+Einstein场方程是由作用量导出的。作用量$S$为
+
+\begin{equation}
+    S = \int d^4 x \sqrt{-g} \mathcal{L} 
+\end{equation}
+其中 $d^4 x \sqrt{-g}$ 是4维协变的体积元，$\mathcal{L}$ 是拉氏量密度，要求 
 \begin{itemize}
-    \item 对于辐射为主的宇宙， $a\propto t^{1/2}$, $d_{ph}(t_0)=2t_0 = D_H$.
-    \item 对于冷物质为主的宇宙， $a\propto t^{2/3}$, $d_{ph}(t_0)=3t_0 = 2 D_H$. 
+    \item[1.] 是4维坐标变换下的不变量。
+    \item[2.] 包含度规的最高2阶导数。
 \end{itemize}
 
-\subsection{事件视界(event horizon)}
-事件视界(event horizon)：未来的观测者所能看到的在 $t$ 时刻或以后的事件在 $t$ 时刻的最远距离。
-
+只有Ricci scalar同时满足这两个条件，还有一个平凡(trivial)解——常数。 把宇宙学常数加到作用量里：
 \begin{equation}
-    d_{eh}(t) = a(t) \int_t^\infty \frac{cdt'}{a(t')} 
+    S = \int d^4 x \sqrt{-g} \left( R  + \Lambda \right) 
+\end{equation}
+导出的场方程为
+\begin{equation}
+    R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R - \Lambda g_{\mu\nu} =  -8\pi G T_{\mu\nu}^{(M)} 
 \end{equation}
 
-\begin{itemize}
-    \item 对于冷物质为主的宇宙， $a\propto t^{2/3}$, $d_{eh}\to \infty$. 
-    \item 若 $\Lambda$ 为主， $a\propto e^{Ht}$ , $H=H_0 \Omega_\Lambda^{1/2}$,  $d_{eh}\to \frac{c}{H}$ 常数，足够时间以后，只有引力束缚的本星系群能看到。 
-\end{itemize}
-
-\subsection{}
-从  $t$ 时刻发出的信号 在未来 $T$ 时刻所能到达的最远距离
+与 \refeq{Eeq.vacuum} 相比，可得
 \begin{equation}
-    \lim_{T \to \infty}   a(T) \int_t^T \frac{cdt'}{a(t')} = d_{eh} \frac{a(T)}{a(t)}
+    \Lambda = 8\pi G \rho_\Lambda 
 \end{equation}
 
-若 $\Lambda$ 为主， $a\propto e^{Ht}$ , $H=H_0 \Omega_\Lambda^{1/2}$,  $d_{eh}\to \frac{c}{H}$ 常数，但 $a(T)\to \infty$，所以我们发出的信号可以到达无限远。 
+真空能与宇宙学常数是等价的。只不过真空能的引入有一些量子场论中的动机，而宇宙学常数则来自对广义相对论的Einstein场方程理论上的推广。下面我们将混用“真空能”和“宇宙学常数”。
 
-\begin{figure}[!hbtp]
-	\centering
-	\includegraphics[width=1.0\linewidth]{horizon.jpg}
-	\caption{视界}
-\end{figure}
+\subsection{Einstein静态宇宙模型}
+
+静态宇宙模型要求 $a$ 为常数，$\dot{a}=\ddot{a}=0$，带入弗里德曼方程得到
+\begin{eqnarray}
+    \rho+3P&=&0 \\
+    K &=& \frac{8}{3} \pi G \rho a^2
+\end{eqnarray}
+
+如果只有物质和辐射，$\rho+3P>0$，所以Einstein在1917年引入了宇宙学常数。以下推导使用真空能，且忽略辐射。
+\begin{equation}
+    \begin{aligned}
+    &\rho=\rho_{M}+\rho_{\Lambda}\\
+    &P=P_{M}+P_{\Lambda}=-\rho_{\Lambda}\\
+    &\rho+3 P = 0 \\
+    & \Rightarrow \rho_{\Lambda}=\frac{1}{2} \rho_{M}
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    K=\frac{8}{3} \pi G \rho a_{E}^{2}=8\pi G \rho_\Lambda a_{E}^{2}>0
+\end{equation}
+
+所以是正曲率，$K=+1$,
+
+\begin{equation}
+    a_E = 1/\sqrt{8\pi G \rho_\Lambda}
+\end{equation}
+
+但这个解不稳定。我们做微扰：
+\begin{eqnarray}
+    a&=&a_{E}+\delta a \\ 
+    \rho_{M}&=&2 \rho_\Lambda+\delta \rho \\ 
+\end{eqnarray}
+
+要总满足
+\begin{equation}
+    1=\frac{8}{3} \pi G \rho a^{2}
+\end{equation}
+
+\begin{equation}
+    \delta a<0 \Rightarrow \delta \rho>0 
+\end{equation}
+使得 $\dot{a}=0$ 继续满足，但二阶导
+
+\begin{equation}
+    \frac{3 \ddot{a}}{a}=-4 \pi G(\rho+3 P)=-4 \pi G\left(3 \rho_\Lambda+\delta \rho-3 \rho_\Lambda\right)=-4 \pi G \delta \rho<0
+\end{equation}
+
+$\delta a<0  \Rightarrow \ddot{a}<0$，
+$\delta a>0  \Rightarrow \ddot{a}>0$，
+即静态模型不稳定。
 
 \end{document}

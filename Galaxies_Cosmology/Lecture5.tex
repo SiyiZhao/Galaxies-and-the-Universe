@@ -3,9 +3,12 @@
 \title{Lecture 5}
 \author{赵思逸}
 
-\date{2022年3月22日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
+\newcommand{\reffig}[1]{图~(\ref{#1})}
+
 
 \begin{document}
 
@@ -18,33 +21,28 @@
     G_{\mu \nu} = 8 \pi G T_{\mu \nu}
 \end{equation}
 该公式左边是爱因斯坦张量(Einstein tensor)，表示时空的几何性质，右边的$T_{\mu\nu}$是能动量张量(Energy-momentum tensor)，由密度$\rho$、压强$P$决定，描述物质的分布。
+引力场方程告诉我们：物质分布决定时空几何。
 
-由\refeq{eq:field}可以得到关于$a(t)$的方程，即弗里德曼(Friedmann)方程
+由\refeq{eq:field}可以得到关于$a(t)$的方程，即弗里德曼(Friedmann)方程。
+本课不做推导，直接给出结论。
+
+我们考虑的物质是宇宙中的理想流体，用密度$\rho$和压强$P$描述，它们决定时空几何 $a(t)$ 和 $K$ 如何演化，即 Friedmann 方程
 \begin{eqnarray}
     &&\dot{a}^2+K = \frac{8}{3} \pi G \rho a^2 \label{eq:adot} \\
-    &&\frac{\ddot{a}}{a} = -\frac{4}{3} \pi G (\rho + 3P)
+    &&\frac{\ddot{a}}{a} = -\frac{4}{3} \pi G (\rho + 3P) \label{eq:addot}
 \end{eqnarray}
 其中$G$是牛顿引力常数，$\rho$是宇宙中物质的密度， $P$是宇宙中物质的压强。 
+我们使用了自然单位制中的光速 $c=1$，\refeq{eq:addot}中的量纲在补齐$c$之后统一，$[P]=[\rho] \times [c^2]$ 。
+
 
 由\refeq{eq:adot}可推出哈勃参数的表达式$H(a)=\sqrt{\frac{8}{3}\pi G \rho(a)-\frac{K}{a^2}}$
 
 
-\section{ Friedmann 方程}
-
-引力场方程：物质分布决定时空几何。
-
-我们考虑的物质是宇宙中的理想流体，用密度$\rho$和压强$P$描述，它们决定时空几何 $a(t)$ 和 $K$ 如何演化，即 Friedmann 方程
-\begin{eqnarray}
-    &&\dot{a}^2+K = \frac{8}{3} \pi G \rho a^2 \label{eq:adot} \label{eq:F1}\\
-    &&\frac{\ddot{a}}{a} = -\frac{4}{3} \pi G (\rho + 3P) \label{eq:F2}
-\end{eqnarray}
-其中我们使用了自然单位制中的光速 $c=1$，\refeq{eq:F2}中的量纲在补齐$c$之后统一，$[P]=[\rho] \times [c^2]$ 。
-
-下面我们考虑\refeq{eq:F1}和\refeq{eq:F2}的关系。对\refeq{eq:F1}求时间导数
+下面我们考虑\refeq{eq:adot}和\refeq{eq:addot}的关系。对\refeq{eq:adot}求时间导数
 \begin{eqnarray}
     \frac{d(1)}{dt} : \qquad 2\dot{a}\ddot{a} = \frac{8}{3} \pi G (\dot{\rho} a^2 + 2\rho a \dot{a})
 \end{eqnarray}
-代入\refeq{eq:F2}得到
+代入\refeq{eq:addot}得到
 \begin{eqnarray}
     \dot{\rho} = -3\frac{\dot{a}}{a}(\rho+P) \label{eq:EnergyCon}
 \end{eqnarray}
@@ -105,9 +103,19 @@
     \end{tabular}
 \end{table}
 
+真空能密度不随宇宙膨胀变化，辐射和冷物质的密度都会随宇宙膨胀而下降，辐射下降得更快。这三种物质的密度随红移的演化如 \reffig{fig:matters-a} 所示。
+
+\begin{figure}[!hbtp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/matters-a.png}
+    \caption{辐射、冷物质和真空能密度随尺度因子的演化。Figure 1.3 of Dodelson \& Schmidt, Modern Cosmology, 2nd Edition.}
+    \label{fig:matters-a}
+\end{figure}
+
 \section{宇宙的演化}
 
-考虑平坦宇宙 $K=0$ ，\refeq{eq:F1}变成
+\subsection{平坦宇宙}
+考虑平坦宇宙 $K=0$ ，\refeq{eq:adot}变成
 \begin{eqnarray}
     \dot{a}^2 = \frac{8}{3} \pi G \rho a^2 \propto \rho a^2
 \end{eqnarray} 
@@ -118,7 +126,8 @@
     \item 真空能为主时，代入$\rho_\Lambda =const.$，得到$a\propto e^{Ht}$，随e指数加速膨胀。
 \end{itemize}
 
-考虑 $K\neq 0$，冷物质为主的宇宙。由$\rho_M\propto a^{-3}$得到密度$\rho a^3 = \rho_0 a^3_0$，下标0表示今天的量。\refeq{eq:F1}变成
+\subsection{冷物质主导的非平坦宇宙}
+考虑 $K\neq 0$，冷物质为主的宇宙。由$\rho_M\propto a^{-3}$得到密度$\rho a^3 = \rho_0 a^3_0$，下标0表示今天的量。\refeq{eq:adot}变成
 \begin{eqnarray}
     \dot{a}^2 + K = \frac{8}{3} \pi G \rho_0 a_0^3/a 
 \end{eqnarray} 
@@ -146,6 +155,15 @@
     t=\frac{1}{2 H_{0}} \frac{\left(1+\left|\Omega_{K}\right|\right)}{\left|\Omega_{K}\right|^{3 / 2}}(\alpha-\sin \alpha)
 \end{equation}
 
+\begin{figure}[!hbtp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/expansion_k.jpg}
+    \caption{冷物质主导下的宇宙膨胀过程，图中$R$是我们的尺度因子$a$。\\ 图源：俞允强《热大爆炸宇宙学》}
+    \label{fig:expansion_k}
+\end{figure}
+
+
+\subsection{临界密度}
 定义宇宙的临界密度
 \begin{equation}
     \rho_\text{crit} \equiv \frac{3H_0^2}{8\pi G} \simeq 1.878\times 10^{-29} h^2 \mathrm{~g~cm^{-3}}
@@ -153,12 +171,14 @@
 它是今天平直宇宙所要求的物质密度。
 
 
-为了满足\refeq{eq:F1}，
+为了满足\refeq{eq:adot}，
 \begin{itemize}
     \item 若$\rho=\rho_\text{crit}$，则$K=0$。
     \item 若$\rho>\rho_\text{crit}$，则$K=+1$。
     \item 若$\rho<\rho_\text{crit}$，则$K=-1$。
 \end{itemize}
+
+\subsection{一般情况下的弗里德曼方程}
 
 考虑最一般的情况
 
@@ -168,7 +188,7 @@
 \end{eqnarray}
 
 定义$\Omega_i$是今天各物质成分在临界密度中的占比，$\Omega_R\equiv\frac{\rho_{R,0}}{\rho_\text{crit}}$, $\Omega_M\equiv\frac{\rho_{M,0}}{\rho_\text{crit}}$, $\Omega_\Lambda\equiv\frac{\rho_{\Lambda,0}}{\rho_\text{crit}}$。
-另外定义曲率“质量”密度 $\Omega_K \equiv -\frac{K c^2}{a_0^2 H_0^2}$ ，则\refeq{eq:F1}变成
+另外定义曲率“质量”密度 $\Omega_K \equiv -\frac{K c^2}{a_0^2 H_0^2}$ ，则\refeq{eq:adot}变成
 \begin{equation}
     \frac{H^2}{H_0^2} = \Omega_R \left(\frac{a}{a_0}\right)^{-4} + \Omega_M \left(\frac{a}{a_0}\right)^{-3} + \Omega_\Lambda + \Omega_K \left(\frac{a}{a_0}\right)^{-2}
 \end{equation}
@@ -185,23 +205,5 @@
 \begin{equation}
     \Omega_R + \Omega_M + \Omega_\Lambda + \Omega_K = 1 \label{eq:allOmega}
 \end{equation}
-注意最后一项 $\Omega_K$ 并不是真实的物质，只是我们用曲率定义出来的量。它决定我们对尺度因子的选取，当$\Omega_K\neq 0$时，$a_0=\frac{c}{H_0\sqrt{|\Omega_K|}}$，只有当$\Omega_K = 0$时，我们才能选取$a_0=1$。
-
-\refeq{eq:allOmega}中，前三项才是宇宙中真实存在的物质，（见\refeq{eq:rho}）它们的总和不一定是1。
-不过宇宙学观测得到的结果 $\Omega_K \approx 0$，可以认为我们的宇宙近似是平坦的。（即使不平坦，宇宙的曲率也非常小。暴涨理论会对这一现象给出解释。） 
-即$\rho_\text{crit}\simeq\rho_0$ ，所以$\Omega_i$也可以近似表示今天各物质成分在宇宙密度中的占比。
-
-小结：
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    $\rho_0>\rho_\text{crit}$  & $\Omega>1$ & $\Omega_K<0$ & $K=+1$ & 正曲率，球面，有限无界 \\ \hline
-    $\rho_0<\rho_\text{crit}$  & $\Omega<1$ & $\Omega_K>0$ & $K=-1$ & 负曲率，超球面，无限无界  \\ \hline
-    $\rho_0=\rho_\text{crit}$  & $\Omega=1$ & $\Omega_K=0$ & $K=0$ & 平直，平直，无限无界 \\ \hline
-    \end{tabular}
-\end{table}
-
-其中前两列是广义物质密度，第3、4列是曲率，第5列描述宇宙的时空几何。
 
 \end{document}
