@@ -13,7 +13,6 @@
 
 \maketitle
 
-\new{
 上节课我们说到：
 最一般情况下，
 Friedmann方程
@@ -40,7 +39,6 @@ $H(z)=H_0 E(z)$
 今天各物质成分占比 $\Omega_i\equiv\frac{\rho_{i,0}}{\rho_\text{crit}}$, 
 广义的物质包含冷物质、辐射、暗能量，$i=M,R,\Lambda$.
 还定义了
-}
 曲率“密度” 
 \begin{equation}
     \Omega_K\equiv-\frac{Kc^2}{H_0^2a_0^2}
@@ -77,17 +75,15 @@ $H(z)=H_0 E(z)$
     \end{tabular}
 \end{table}
 其中前两列是广义物质密度，第3、4列是曲率，第5列描述宇宙的时空几何。
-\new{
 $K=+1$时，物质主导的宇宙先膨胀后收缩；
 $K=0$或$K=-1$时，物质主导的宇宙一直减速膨胀；
 但有暗能量存在时，宇宙在足够晚期会进入加速膨胀。
-}
 
-\new{今天的标准宇宙学模型就是要测量 $\Omega_R$, $\Omega_M$, $\Omega_\Lambda$, $\Omega_K$ 还有 $H_0$ 这些参数。
-当模型确定后，就可以知道时间、距离、红移、尺度因子之间的对应关系。}
+今天的标准宇宙学模型就是要测量 $\Omega_R$, $\Omega_M$, $\Omega_\Lambda$, $\Omega_K$ 还有 $H_0$ 这些参数。
+当模型确定后，就可以知道时间、距离、红移、尺度因子之间的对应关系。
 
 \section{时间和距离}
-\subsection{宇宙年龄\new{（age）}}
+\subsection{宇宙年龄（age）}
 
 \begin{eqnarray}
     t_\text{age}(z) &=& \int_0^{t_\text{age}} dt' = \frac{1}{H_0}\int_0^\frac{1}{1+z} \frac{da'}{a' E(a')} \\ 
@@ -109,9 +105,9 @@ $K=0$或$K=-1$时，物质主导的宇宙一直减速膨胀；
 \end{eqnarray}
 宇宙学模型 $\left(\Omega_M, \Omega_\Lambda\right) $决定 $t_\text{LB}(z)$关系。
 
-\subsection{光传播经过的路径在今天的距离}
+\subsection{光源与观测者在今天的距离}
 
-即 $a_0 \chi_\text{comoving}$ ，其中 $\chi_\text{comoving}$ 是光源在共动坐标下距观测者的距离。 
+定义 $\chi(z)$ 是光源与观测者在今天的距离。 
 
 \begin{eqnarray}
     \chi(z) &=& \int_t^{t_0} cdt' \frac{a_0}{a(t')} = \frac{c}{H_0}\int_{\frac{a}{a_0}}^1 \frac{da'}{a'^2 E(a')} =\frac{c}{H_0}\int_0^z \frac{dz'}{E(z')} \\ 
@@ -166,35 +162,6 @@ $r$ 将可测量量 $d_A$ 和 $d_L$ 与  $\chi$ 联系起来。通过测量 $d_A
     \item $\Omega_M=1.3, \Omega_\Lambda=0$, 推出 $\Omega_K=-0.3<0, K=+1, S_k(x)=\sin x$，\\ 在 $z=1$ 的地方，\\$\frac{\Delta \theta}{\Delta z}=\frac{\sqrt{0.3}}{\sqrt{1.3\times 2^3-0.3\times 2^2}}\left[\sin(\sqrt{0.3}  \int_{0}^{1} \frac{d z^{\prime}}{\sqrt{1.3(1+z')^3 - 0.3 (1+z')^2}})\right]^{-1}=0.594.$  
     \item $\Omega_M=0.3, \Omega_\Lambda=0$, 推出 $\Omega_K=0.7>0, K=-1, S_k(x)=\sinh x$，\\ 在 $z=1$ 的地方，\\ $\frac{\Delta \theta}{\Delta z}=\frac{\sqrt{0.7}}{\sqrt{0.3\times 2^3 + 0.7\times 2^2}}\left[\sinh(\sqrt{0.7}  \int_{0}^{1} \frac{d z^{\prime}}{\sqrt{0.3(1+z')^3 + 0.7 (1+z')^2}})\right]^{-1}=0.640.$  
 \end{itemize}
-
-
-\section{宇宙学常数和真空能}
-
-\new{注意：这整个section是新加的}
-
-量子场论中，真空有基态能量 $\frac{1}{2}\hbar \omega$, 但广义相对论中能量零点的选取不是任意的。 
-
-真空能拥有“随着宇宙膨胀密度不变”的性质，因此具有负压 $P=-\rho_\Lambda$。
-代入能动量张量 $T_{\mu \nu}$ 中，我们发现 
-\begin{equation}
-    T_{\mu \nu} = - \rho_\Lambda
-    g_{\mu \nu}
-\end{equation}
-
-Einstein场方程由对作用量(action)做变分得到。
-作用量允许出现一个常数 $\Lambda$, 
-\begin{equation}
-    S = \int d^4 x \sqrt{-g} (R + \Lambda)
-\end{equation}
-则场方程左边可以多出一项 $\Lambda g_{\mu \nu}$,
-\begin{equation}
-    R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} + \Lambda g_{\mu \nu}= 8 \pi G T_{\mu \nu}
-\end{equation}
-将这一项挪到右边，并令 $\Lambda = 8 \pi G \rho_\Lambda$, 就可以把这项作为“真空能”并入能动量张量中。
-
-所以人们经常把“真空能”和“宇宙学常数”$\Lambda$混称。
-Einstein是为了得到一个静止宇宙的模型而提出的 $\Lambda$，后来发现哈勃定律后，Einstein 认为这是他 “最大的错误”。
-实际上，Einstein 的宇宙学模型还有一个致命的缺陷就是不稳定。
 
 \section{宇宙学常数和真空能}
 
