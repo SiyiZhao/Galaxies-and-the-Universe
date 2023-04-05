@@ -3,7 +3,8 @@
 \title{Lecture 7}
 \author{赵思逸}
 
-\date{2022年4月12日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
 \newcommand{\reffig}[1]{图~(\ref{#1})}
@@ -56,9 +57,9 @@
 	\caption{视界}
 \end{figure}
 
-\section{早期宇宙的历史}
+\part*{早期宇宙的历史}
 
-本章会讲3个重要的话题：
+本章会讲3个重要的话题：（时间由晚到早。）
 \begin{itemize}
     \item CMB 微波背景辐射
     \item BBN 大爆炸核合成
@@ -76,7 +77,7 @@
 
 另一方面，当光子和电子的散射速率小于宇宙膨胀速率后，光子和电子退耦。
 
-光子被电子散射的速率 $\Lambda_\gamma = \sigma_T n_e v$，其中 $\sigma_T$ 是Thomson散射截面，$n_e$ 是电子数密度， $v$是电子运动速度。早期运动速度接近光速，$\Lambda_\gamma \simeq \sigma_T n_e c \propto a^{-3} \propto \left(T/T_{\gamma 0}\right)^3 $ 其中$T_{\gamma 0}$ 是今天CMB的温度。
+光子被电子散射的速率 $\Lambda_\gamma = \sigma_T n_e v$，其中 $\sigma_T$ 是Thomson散射截面，$n_e$ 是电子数密度， $v$是电子运动速度。早期运动速度接近光速，$$\Lambda_\gamma \simeq \sigma_T n_e c \propto a^{-3} \propto \left(T/T_{\gamma 0}\right)^3$$ 其中$T_{\gamma 0}$ 是今天CMB的温度。
 
 宇宙膨胀速率，在辐射占主导期， $H\propto a^{-2} \propto \left(T/T_{\gamma 0}\right)^2$ 。早期散射速率远大于膨胀速率，能达到化学平衡。但散射速率降得更快，当散射速率小于宇宙膨胀速率，化学平衡被打破。
 
@@ -94,26 +95,8 @@
     \item 各向同性：来自所有方向的CMB温度高度相同。
     \item 辐射场强度随频率的分布符合黑体辐射谱。（Planck公式）
     \item 退耦能标约为 $0.3\mathrm{eV}$，温度约为3000K，红移约为1100
-    \item 温度涨落有偶极矩。（因为地球、太阳、银河系的运动。）
+    \item 温度涨落有偶极矩，大小约为$10^{-3}$。（因为地球、太阳、银河系的运动。）
     \item 扣除偶极矩后，仍然存在微小的温度起伏，这就是后来宇宙密度起伏、形成星系等结构的种子/初始条件。
 \end{itemize}
-
-为什么CMB符合黑体谱？
-
-在最后散射面 $t_L$，光子辐射谱满足Planck公式：
-\begin{equation}
-    n_{T(t_L)}(\nu_L) d \nu_L=\frac{8 \pi \nu_L^{2} d \nu_L}{\exp \left(\frac{h_\text{pl} \nu_L}{k_{B} T(t_L)} \right)-1}
-\end{equation}
-在$t>t_L$，光子频率由于宇宙学红移降低 $\nu=\nu_{L} \frac{a(t_L)}{a(t)}$，
-光子数密度 $n\left(\nu, t\right) d\nu \propto a^{-3}$即
-\begin{equation}
-    n(\nu, t) d \nu=\left(\frac{a(t_L)}{a(t)}\right)^{3} n_{T\left(t_{L}\right)}\left(\nu_{L}\right) d \nu_{L}
-\end{equation}
-
-代入得
-\begin{equation}
-    n(\nu, t) d \nu = \frac{8 \pi \nu^{2} d \nu}{\exp \left(\frac{h_\text{pl} \nu}{k_{B} \frac{a(t_L)}{a(t)}T(t_L)}   \right)-1}
-\end{equation}
-仍然是黑体谱。此时光子不处于热平衡，不妨令$T(t)=\frac{a(t_L)}{a(t)}T(t_L)$，即$T\propto 1/a$.
 
 \end{document}

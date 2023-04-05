@@ -13,6 +13,24 @@
 
 \section*{微波背景辐射（续）}
 
+为什么CMB符合黑体谱？
+
+在最后散射面 $t_L$，光子辐射谱满足Planck公式：
+\begin{equation}
+    n_{T(t_L)}(\nu_L) d \nu_L=\frac{8 \pi \nu_L^{2} d \nu_L}{\exp \left(\frac{h_\text{pl} \nu_L}{k_{B} T(t_L)} \right)-1}
+\end{equation}
+在$t>t_L$，光子频率由于宇宙学红移降低 $\nu=\nu_{L} \frac{a(t_L)}{a(t)}$，
+光子数密度 $n\left(\nu, t\right) d\nu \propto a^{-3}$即
+\begin{equation}
+    n(\nu, t) d \nu=\left(\frac{a(t_L)}{a(t)}\right)^{3} n_{T\left(t_{L}\right)}\left(\nu_{L}\right) d \nu_{L}
+\end{equation}
+
+代入得
+\begin{equation}
+    n(\nu, t) d \nu = \frac{8 \pi \nu^{2} d \nu}{\exp \left(\frac{h_\text{pl} \nu}{k_{B} \frac{a(t_L)}{a(t)}T(t_L)}   \right)-1}
+\end{equation}
+仍然是黑体谱。此时光子不处于热平衡，不妨令$T(t)=\frac{a(t_L)}{a(t)}T(t_L)$，即$T\propto 1/a$.
+
 \subsection*{光子、核子密度}
 
 光子的能量密度 $\rho_\gamma = \int h_{\mathrm{pl}} \nu n(\nu) d\nu = a_B T^4$， 其中 $a_B=\frac{8\pi^5 k_B^4}{15 h_{\mathrm{pl}}^3 c^3 } = 7.566\times 10^{-15} \mathrm{~erg~cm^{-3}K^{-4}}$.
