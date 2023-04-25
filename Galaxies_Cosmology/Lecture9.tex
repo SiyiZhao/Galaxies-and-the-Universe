@@ -4,10 +4,12 @@
 \title{Lecture 9}
 \author{赵思逸}
 
-\date{2022年4月26日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
 \newcommand{\reffig}[1]{图~(\ref{#1})}
+
 \begin{document}
 
 \maketitle
@@ -16,10 +18,10 @@
 
 光子数密度符合普朗克公式
 \begin{equation}
-    n_T\left(\nu\right) d\nu = \frac{8\pi \nu^2 /c^3}{e^\frac{h\nu}{k_BT}-1} d\nu
+    n_T\left(\nu\right) d\nu = \frac{8\pi \nu^2 /c^3}{e^\frac{h\nu}{k_B T}-1} d\nu
 \end{equation}
 
-我们求相空间的数密度。相空间（坐标和动量组成的参数空间）的粒子数量 $N\left(\boldsymbol{x},\boldsymbol{p}\right) d^3x d^3p$是守恒量， 其中$d^3x d^3p$是相空间的体积元，是 Lorentz 不变量， 因此$N\left(\boldsymbol{x},\boldsymbol{p}\right)$也是Lorentz不变量。
+我们求\textbf{相空间}的数密度。相空间（坐标和动量组成的参数空间）的粒子数量 $N\left(\boldsymbol{x},\boldsymbol{p}\right) d^3x d^3p$是守恒量， 其中$d^3x d^3p$是相空间的体积元，是 Lorentz 不变量， 因此$N\left(\boldsymbol{x},\boldsymbol{p}\right)$也是Lorentz不变量。
 
 对于光子， $|\boldsymbol{p}|=E/c=h_{\mathrm{pl}} \nu/c$,则 $d^3p=4\pi |\boldsymbol{p}|^2 dp=4\pi h_{\mathrm{pl}}^3 \nu^2/c^3 d\nu$. 且对于光子， $N_\gamma(\boldsymbol{x},\boldsymbol{p})=N_\gamma\left(p\right) $
 
@@ -29,7 +31,7 @@
 \end{equation}
 其中1/2是因为光子有两种极化。
 
-得到 
+得到 相空间的光子数密度
 \begin{equation}
     N_\gamma(p) = \frac{1}{h_{\mathrm{pl}}^3} \frac{1}{e^\frac{pc}{k_B T}-1}
 \end{equation}
@@ -50,8 +52,8 @@ $\gamma \equiv \left(1-\beta^2\right)^{-\frac{1}{2}}\sim 1$.
 可以观测到偶极各向异性，其中$\theta=0$时（光子从后方追上观察者），观测到的温度$T'$偏低，$\theta=\pi$时（光子迎面而来），观测到的温度$T'$偏高。
 
 实际观测到的CMB偶极矩说明了地球相对于“CMB frame”有运动。
+最新的结果由Planck卫星2018年的测量给出：$v = 369.82 \pm 0.11 \mathrm{~km/s}$，方向指向银道坐标系的 $l = 264.021 \pm 0.011 \mathrm{~deg}$ ;  $b = 48.253 \pm 0.005 \mathrm{~deg}$.
 扣除这个偶极矩后，我们可以得到宇宙真实的密度起伏。
-
 
 \section{大爆炸核合成 \\（Big Bang Nucleosynthesis, BBN）}
 
