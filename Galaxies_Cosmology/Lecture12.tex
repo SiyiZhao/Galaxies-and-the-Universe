@@ -15,27 +15,7 @@
 
 \section{线性微扰理论（续）}
 
-\subsection{考虑宇宙膨胀}
 
-上节课我们在计算重子物质涨落时忽略宇宙膨胀，现在我们加上这个效应（Hubble drag,下式左边第二项），完整的线性微扰方程为
-% 考虑 Hubble drag,（下式左边第二项）
-\begin{equation} \label{eq:lin-pertur_Fouri}
-    \frac{d^2 \delta_{\vec{k}}}{dt^2 } + 2\frac{\dot{a}}{a} \frac{d\delta_{\vec{k}}}{dt} = \left[4\pi G \bar{\rho}-\frac{k^2c_s^2}{a^2}\right] \delta_{\vec{k}} -\frac{2}{3}\frac{\bar{T}}{a^2}k^2 S_{\vec{k}}
-\end{equation}
-我们忽略声速项 $\frac{k^2c_s^2}{a^2} \delta_{\vec{k}}$，并且假设 isentropic perturbations, 所以 也忽略 $\frac{2}{3}\frac{\bar{T}}{a^2}k^2 S_{\vec{k}}$. 
-线性微扰方程变成
-\begin{equation} \label{eq:lin-pertur}
-    \frac{d^2 \delta_{\vec{k}}}{dt^2 } + 2\frac{\dot{a}}{a} \frac{d\delta_{\vec{k}}}{dt} = 4\pi G \bar{\rho} \delta_{\vec{k}} 
-\end{equation}
-% 分两种情况考虑。
-
-在物质为主 ($\Omega_M=1$) 的宇宙里，其增长解由 随时间exp指数增长 减为 随时间幂次增长，
-即
-\refeq{eq:lin-pertur} 的增长解为
-\begin{equation}
-    \delta_{+} \propto H(t) \int_{0}^{t} \frac{d t^{\prime}}{a^{2}\left(t^{\prime}\right) H^{2}\left(t^{\prime}\right)} \propto H(z) \int_{z}^{\infty} \frac{1+z^{\prime}}{E^{3}\left(z^{\prime}\right)} d z^{\prime} \propto t^{2/3}
-\end{equation}
-也就是说，Hubble drag延缓了宇宙物质扰动的增长速度。
 
 对于超视界的涨落 (Super-Horizon perturbation), 即 $\lambda > \lambda_{\rm{H}}$,
 有 $\Phi_{\vec{k}}=\rm{const.}$
@@ -47,7 +27,7 @@ $\delta_{\vec{k}}$ 随着 $\left(\bar{\rho} a^{2}\right)^{-1}$ 增长。
 
 对于视界以内的涨落 (Sub-Horizon perturbation), 即 $\lambda < \lambda_{\rm{H}}$, 在辐射主导时期，这些涨落会震荡。
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 其实 $\delta \propto  \delta_{+}$, 也不需要物质主导。
 % $$
@@ -98,6 +78,7 @@ $\frac{\delta T}{T} \sim 10^{-5}$.
 	\caption{考虑宇宙膨胀时的重子涨落}
     \label{fig:Bary_pert}
 \end{figure}
+%%%%%%%%%%%%%%%%%%
 
 
 \subsection{Dark Matter Perturbation}

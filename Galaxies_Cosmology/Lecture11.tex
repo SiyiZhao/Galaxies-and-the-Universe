@@ -159,9 +159,11 @@ $\delta, \vec{v}, \Phi, \delta S, \delta T$都是小量，我们抛弃高阶项�
     \frac{\partial \vec{v}}{\partial t} + \frac{\dot{a}}{a}\vec{v} &=& -\frac{\nabla \Phi}{a} - \frac{c_s^2}{a}\nabla \delta - \frac{2\bar{T}}{3 a}\nabla S \label{eq:Euler-o1}
 \end{eqnarray}
 对 \refeq{eq:continu-o1} 求时间偏导，将 \refeq{eq:Euler-o1} 和泊松方程 \refeq{eq:Poisson-como} 代入，得到非相对论流体的线性微扰方程
-\begin{equation} \label{eq:linear_pertur}
-    \frac{\partial^{2} \delta}{\partial t^{2}}+2 \frac{\dot{a}}{a} \frac{\partial \delta}{\partial t}=4 \pi G \bar{\rho} \delta+\frac{c_{s}^{2}}{a^{2}} \nabla^{2} \delta+\frac{2}{3} \frac{\bar{T}}{a^{2}} \nabla^{2} S
-\end{equation}
+\begin{shaded}
+    \begin{equation} \label{eq:linear_pertur}
+        \frac{\partial^{2} \delta}{\partial t^{2}}+2 \frac{\dot{a}}{a} \frac{\partial \delta}{\partial t}=4 \pi G \bar{\rho} \delta+\frac{c_{s}^{2}}{a^{2}} \nabla^{2} \delta+\frac{2}{3} \frac{\bar{T}}{a^{2}} \nabla^{2} S
+    \end{equation}  
+\end{shaded}
 右侧三项分别由引力、压强、熵贡献。左侧第二项是 Hubble drag, 正比于 $H(t)$, 将涨落的增长压低，相当于“摩擦力”。
 
 \subsection{涨落(perturbations)}
@@ -179,7 +181,7 @@ isocurvature perturbation 指 $\delta = 0$, 此时 $\frac{\delta_r}{\delta_m} = 
 
 % If $\delta = 0$ , then $\frac{\delta_r}{\delta_m} = -\frac{\bar{\rho}_m}{\bar{\rho}_r} = -\frac{a}{a_{eq}}$
 
-在宇宙早期，辐射占主导，即 $\bar{\rho}_r \gg \bar{\rho}_m$ ，此时 $\delta_r\sim 0$ ，称为 isothermal perturbation.
+在宇宙早期，辐射占主导，即 $\bar{\rho}_r \gg \bar{\rho}_m$ ，此时 \new{isocurvature perturbation 近似为} $\delta_r \approx  0$ ，称为 isothermal perturbation.
 
 % At early time, radiation dominated, $\bar{\rho}_r \gg \bar{\rho}_m$, then $\delta_r\sim 0$, called isothermal perturbation. 
 % isocurvature is only  isothermal at early times.
@@ -201,12 +203,14 @@ isocurvature perturbation 指 $\delta = 0$, 此时 $\frac{\delta_r}{\delta_m} = 
 若 $\delta S=0$, 则 $\delta_r = \frac{4}{3} \delta_m$, 称为 adiabatic perturbation, 也称为 isentropic perturbation.
 % If $\delta S=0$, then $\delta_r = \frac{4}{3} \delta_m$, called isentropic perturbation, also called adiabatic perturbation.
 
-以上两种都是初始条件下的微扰(initial perturbation)。这两种微扰可以看作“正交的”，其它的微扰都可以写做这二者的线性组合。
+以上两种都是初始条件下的微扰(initial perturbation)。
+这两种微扰可以看作“正交的”，其它的微扰都可以写做这二者的线性组合。
+\new{在宇宙膨胀足够快的情况下，各部分独立膨胀，近似为绝热膨胀，所以adiabatic perturbation 用得比较多。}
 
 \subsection{傅立叶空间中的线性微扰论}
 
 为了便于计算空间偏导，我们考虑傅立叶空间中的微扰
-（the second eq. is wrong!）
+% （the second eq. is wrong!）
 \begin{eqnarray}
     \delta\left(\vec{x},t\right) &=& \int \frac{d^3k}{(2\pi)^3} \delta_{\vec{k}}\left(t\right) e^{i\vec{k}\cdot \vec{x}} \\ 
     \delta_S\left(\vec{x},t\right) &=& \int \frac{d^3k}{(2\pi)^3} S_{\vec{k}}\left(t\right) e^{i\vec{k}\cdot \vec{x}}
@@ -274,7 +278,7 @@ $P=\frac{k_{B}T}{\mu m_p}\rho$,
 % $\lambda_\text{J}^\text{comoving} \simeq 10^{-5} \left(\Omega_b h^2\right)^{-\frac{1}{2}} \mathrm{~Mpc}$
 当 z=1100 时，
 $\lambda_\text{J}^\text{comoving} \simeq 10^{-5}  \left(\Omega_b h^2\right)^{-\frac{1}{2}} \mathrm{~Mpc}$.
-$M_\text{J} \simeq 1.5\times 10^5 \left(\Omega_b h^2\right)^{-\frac{1}{2}} M_\odot$, 约为球状星团的质量，所以再复合之后，比球状星团大的重子涨落都可以增长。
+$M_\text{J} \simeq 1.5\times 10^5 \left(\Omega_b h^2\right)^{-\frac{1}{2}} M_\odot$ \new{$\simeq 10^6 M_\odot$}, 约为球状星团的质量，所以再复合之后，比球状星团大的重子涨落都可以增长。
 
 % At $t=t_{eq}$,
 
@@ -287,6 +291,7 @@ $P=P_r=\frac{1}{3}\rho_r c^2$.
 当 $t=t_{eq}$ 时，
 $M_\text{J} \simeq 1.2\times 10^{16} \left(\Omega_b h^2\right)^{-2} M_\odot$,
 约为 supercluster 的质量，在再复合之前，绝热重子涨落要比 supercluster 大才能增长。
+\new{再复合前后金斯质量的断崖式下跌是因为声速 $c_s$ 的突变。}
 
 再复合之前，光子和重子散射，会把涨落抹平，称为
 Silk Damping.
@@ -310,4 +315,69 @@ Silk Damping.
     \item $t_\text{eq}<t<t_\text{rec}$ 时，  $\bar{\rho}\propto a^{-3}$, $c_s\propto a^{-1/2}$, $\lambda_\text{J}^\text{comoving} \propto a^{0}$, 但存在 Silk Damping.
     \item $t<t_\text{eq}$ 时， $\bar{\rho}\propto a^{-4}$, $c_s\propto a^{0}$, $\lambda_\text{J}^\text{comoving} \propto a$.
 \end{itemize}
+
+因为 Silk damping 的存在，到recombination时，所有小尺度的 重子涨落都被擦除，
+结构形成只能是大尺度的涨落先涨起来，然后再逐渐过渡到小尺度，这叫做
+Top-down Scenario.
+但 Top-down Scenario
+存在一些问题：
+在 Top-down Scenario 中，要形成今天的大尺度结构，需要 recombination 时
+的物质涨落 $|\delta_m|> 10^{-3}$. 
+而物质涨落和CMB涨落相联系
+$\frac{\delta T}{T}=\frac{1}{4} |\delta_r| = \frac{1}{4} \times \frac{4}{3} |\delta_m| \sim 10^{-3}$.
+早期CMB的测量就排除了 Top-down Scenario. 今天测量到 CMB涨落约为 
+$\frac{\delta T}{T} \sim 10^{-5}$.
+
+可见仅有重子涨落 无法解释现有的观测迹象，需要另一种物质来提供涨落，这就是暗物质。
+\new{冷暗物质可以将金斯质量大大压低，从而解决 Top-down Scenario 的问题。}
+% Peebles 等 发展了 新的模型： recombination之前 isothermal perturbation，
+% 此时 声速很小，所以金斯尺度也很小， 没有 Silk damping . 金斯mass 1e6 M_sun
+%  bottom-up
+% CMB涨落还是太大
+%  isothermal perturbation un-natural
+% 重子的 perturbation 无法解释现有的观测迹象，需要
+
+\subsection{考虑宇宙膨胀}
+
+上节课我们在计算重子物质涨落时忽略宇宙膨胀，现在我们加上这个效应（Hubble drag,下式左边第二项），完整的线性微扰方程为
+% 考虑 Hubble drag,（下式左边第二项）
+\begin{equation} \label{eq:lin-pertur_Fouri}
+    \frac{d^2 \delta_{\vec{k}}}{dt^2 } + 2\frac{\dot{a}}{a} \frac{d\delta_{\vec{k}}}{dt} = \left[4\pi G \bar{\rho}-\frac{k^2c_s^2}{a^2}\right] \delta_{\vec{k}} -\frac{2}{3}\frac{\bar{T}}{a^2}k^2 S_{\vec{k}}
+\end{equation}
+我们忽略声速项 $\frac{k^2c_s^2}{a^2} \delta_{\vec{k}}$，并且假设 isentropic perturbations, 所以 也忽略 $\frac{2}{3}\frac{\bar{T}}{a^2}k^2 S_{\vec{k}}$. 
+线性微扰方程变成
+\begin{equation} \label{eq:lin-pertur}
+    \frac{d^2 \delta_{\vec{k}}}{dt^2 } + 2\frac{\dot{a}}{a} \frac{d\delta_{\vec{k}}}{dt} = 4\pi G \bar{\rho} \delta_{\vec{k}} 
+\end{equation}
+% 分两种情况考虑。
+
+在物质为主 ($\Omega_M=1$) 的宇宙里，其增长解由 随时间exp指数增长 减为 随时间幂次增长，
+即
+\refeq{eq:lin-pertur} 的增长解为
+\begin{equation}
+    \delta_{+} \propto H(t) \int_{0}^{t} \frac{d t^{\prime}}{a^{2}\left(t^{\prime}\right) H^{2}\left(t^{\prime}\right)} \propto H(z) \int_{z}^{\infty} \frac{1+z^{\prime}}{E^{3}\left(z^{\prime}\right)} d z^{\prime} \propto t^{2/3}
+\end{equation}
+也就是说，Hubble drag延缓了宇宙物质扰动的增长速度。
+
+在物质主导期（$\Omega_M\approx 1$），
+\begin{equation}
+    \delta_{+}  \propto  t^{2/3} \propto a =\frac{1}{1+z}
+\end{equation}
+
+将 $\delta_{\vec{k}}$   的空间部分和时间部分分开： $\delta_{\vec{k}}(t) = \delta_{\vec{k}}(t_0) D(t)$, 其中 定义了 $D(t)$ 是线性增长率(linear growth rate), 写做 红移的函数为 $D(z)=g(z)/(1+z)$.
+此时 
+\begin{equation}
+    \delta_{+} \propto D(t) \propto a =\frac{1}{1+z}
+\end{equation}
+
+\reffig{fig:Bary_pert} 总结了考虑宇宙膨胀时的重子涨落情况。
+
+\begin{figure}[!hbtp]
+	\centering 
+	\includegraphics[width=1.0\linewidth]{Baryon_pert_H.png}
+	\caption{考虑宇宙膨胀时的重子涨落}
+    \label{fig:Bary_pert}
+\end{figure}
+
+
 \end{document}
