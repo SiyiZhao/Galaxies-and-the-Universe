@@ -2,9 +2,8 @@
 \usepackage{amsmath,graphicx,textcomp,subfigure,indentfirst,ctex,color,float}
 \usepackage{bm, mhchem}
 \title{Lecture 12}
-\author{授课、校对：茅奕  \\ 记录：赵思逸}
-
-\date{2022年5月24日}
+\date{\today}
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
 
 \newcommand{\refeq}[1]{式~(\ref{#1})}
 \newcommand{\refeqs}[2]{式~(\ref{#1}) - (\ref{#2})}
@@ -13,75 +12,73 @@
 
 \maketitle
 
-\section{线性微扰理论（续）}
+% \section{线性微扰理论（续）}
+
+% 对于超视界的涨落 (Super-Horizon perturbation), 即 $\lambda > \lambda_{\rm{H}}$,
+% 有 $\Phi_{\vec{k}}=\rm{const.}$
+% 所以 
+% \begin{equation}
+%     -k^{2} \Phi_{\vec{k}}=4 \pi G a^{2} \bar{\rho} \delta_{\vec{k}} \quad \Rightarrow \quad \delta_{\vec{k}} \propto\left(\bar{\rho} a^{2}\right)^{-1}
+% \end{equation}
+% $\delta_{\vec{k}}$ 随着 $\left(\bar{\rho} a^{2}\right)^{-1}$ 增长。
+
+% 对于视界以内的涨落 (Sub-Horizon perturbation), 即 $\lambda < \lambda_{\rm{H}}$, 在辐射主导时期，这些涨落会震荡。
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % 其实 $\delta \propto  \delta_{+}$, 也不需要物质主导。
+% % $$
+% % g(z) \approx \frac{5}{2} \Omega_{m}(z)\left\{\Omega_{m}^{4 / 7}(z)-\Omega_{\Lambda}(z)+\left[1+\frac{\Omega_{m}(z)}{2}\right]\left[1+\frac{\Omega_{\Lambda}(z)}{70}\right]\right\}^{-1}
+% % $$
+% % matter dominated era
+% 在物质主导期（$\Omega_M\approx 1$），
+% \begin{equation}
+%     \delta_{+}  \propto  t^{2/3} \propto a =\frac{1}{1+z}
+% \end{equation}
+
+% 将 $\delta_{\vec{k}}$   的空间部分和时间部分分开： $\delta_{\vec{k}}(t) = \delta_{\vec{k}}(t_0) D(t)$, 其中 定义了 $D(t)$ 是线性增长率(linear growth rate), 写做 红移的函数为 $D(z)=g(z)/(1+z)$.
+% 此时 
+% \begin{equation}
+%     \delta_{+} \propto D(t) \propto a =\frac{1}{1+z}
+% \end{equation}
+
+% % ----
+% % Silk damping 会擦除全部的消除的 重子涨落 ，到recombination。 
+
+% % ----
+
+% \reffig{fig:Bary_pert} 总结了考虑宇宙膨胀时的重子涨落情况。
+
+% 因为 Silk damping 的存在，到recombination时，所有小尺度的 重子涨落都被擦除，
+% 结构形成只能是大尺度的涨落先涨起来，然后再逐渐过渡到小尺度，这叫做
+% Top-down Scenario.
+% 但 Top-down Scenario
+% 存在一些问题：
+% 在 Top-down Scenario 中，要形成今天的大尺度结构，需要 recombination 时
+% 的物质涨落 $|\delta_m|> 10^{-3}$. 
+% 而物质涨落和CMB涨落相联系
+% $\frac{\delta T}{T}=\frac{1}{4} |\delta_r| = \frac{1}{4} \times \frac{4}{3} |\delta_m| \sim 10^{-3}$.
+% 早期CMB的测量就排除了 Top-down Scenario. 今天测量到 CMB涨落约为 
+% $\frac{\delta T}{T} \sim 10^{-5}$.
+
+% 可见仅有重子涨落 无法解释现有的观测迹象，需要另一种物质来提供涨落，这就是暗物质。
+% % Peebles 等 发展了 新的模型： recombination之前 isothermal perturbation，
+% % 此时 声速很小，所以金斯尺度也很小， 没有 Silk damping . 金斯mass 1e6 M_sun
+% %  bottom-up
+% % CMB涨落还是太大
+% %  isothermal perturbation un-natural
+% % 重子的 perturbation 无法解释现有的观测迹象，需要
+
+% \begin{figure}[!hbtp]
+% 	\centering 
+% 	\includegraphics[width=1.0\linewidth]{Baryon_pert_H.png}
+% 	\caption{考虑宇宙膨胀时的重子涨落}
+%     \label{fig:Bary_pert}
+% \end{figure}
+% %%%%%%%%%%%%%%%%%%
 
 
-
-对于超视界的涨落 (Super-Horizon perturbation), 即 $\lambda > \lambda_{\rm{H}}$,
-有 $\Phi_{\vec{k}}=\rm{const.}$
-所以 
-\begin{equation}
-    -k^{2} \Phi_{\vec{k}}=4 \pi G a^{2} \bar{\rho} \delta_{\vec{k}} \quad \Rightarrow \quad \delta_{\vec{k}} \propto\left(\bar{\rho} a^{2}\right)^{-1}
-\end{equation}
-$\delta_{\vec{k}}$ 随着 $\left(\bar{\rho} a^{2}\right)^{-1}$ 增长。
-
-对于视界以内的涨落 (Sub-Horizon perturbation), 即 $\lambda < \lambda_{\rm{H}}$, 在辐射主导时期，这些涨落会震荡。
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% 其实 $\delta \propto  \delta_{+}$, 也不需要物质主导。
-% $$
-% g(z) \approx \frac{5}{2} \Omega_{m}(z)\left\{\Omega_{m}^{4 / 7}(z)-\Omega_{\Lambda}(z)+\left[1+\frac{\Omega_{m}(z)}{2}\right]\left[1+\frac{\Omega_{\Lambda}(z)}{70}\right]\right\}^{-1}
-% $$
-% matter dominated era
-在物质主导期（$\Omega_M\approx 1$），
-\begin{equation}
-    \delta_{+}  \propto  t^{2/3} \propto a =\frac{1}{1+z}
-\end{equation}
-
-将 $\delta_{\vec{k}}$   的空间部分和时间部分分开： $\delta_{\vec{k}}(t) = \delta_{\vec{k}}(t_0) D(t)$, 其中 定义了 $D(t)$ 是线性增长率(linear growth rate), 写做 红移的函数为 $D(z)=g(z)/(1+z)$.
-此时 
-\begin{equation}
-    \delta_{+} \propto D(t) \propto a =\frac{1}{1+z}
-\end{equation}
-
-% ----
-% Silk damping 会擦除全部的消除的 重子涨落 ，到recombination。 
-
-% ----
-
-\reffig{fig:Bary_pert} 总结了考虑宇宙膨胀时的重子涨落情况。
-
-因为 Silk damping 的存在，到recombination时，所有小尺度的 重子涨落都被擦除，
-结构形成只能是大尺度的涨落先涨起来，然后再逐渐过渡到小尺度，这叫做
-Top-down Scenario.
-但 Top-down Scenario
-存在一些问题：
-在 Top-down Scenario 中，要形成今天的大尺度结构，需要 recombination 时
-的物质涨落 $|\delta_m|> 10^{-3}$. 
-而物质涨落和CMB涨落相联系
-$\frac{\delta T}{T}=\frac{1}{4} |\delta_r| = \frac{1}{4} \times \frac{4}{3} |\delta_m| \sim 10^{-3}$.
-早期CMB的测量就排除了 Top-down Scenario. 今天测量到 CMB涨落约为 
-$\frac{\delta T}{T} \sim 10^{-5}$.
-
-可见仅有重子涨落 无法解释现有的观测迹象，需要另一种物质来提供涨落，这就是暗物质。
-% Peebles 等 发展了 新的模型： recombination之前 isothermal perturbation，
-% 此时 声速很小，所以金斯尺度也很小， 没有 Silk damping . 金斯mass 1e6 M_sun
-%  bottom-up
-% CMB涨落还是太大
-%  isothermal perturbation un-natural
-% 重子的 perturbation 无法解释现有的观测迹象，需要
-
-\begin{figure}[!hbtp]
-	\centering 
-	\includegraphics[width=1.0\linewidth]{Baryon_pert_H.png}
-	\caption{考虑宇宙膨胀时的重子涨落}
-    \label{fig:Bary_pert}
-\end{figure}
-%%%%%%%%%%%%%%%%%%
-
-
-\subsection{Dark Matter Perturbation}
+\section{Dark Matter Perturbation}
 
 暗物质是不与 光子 发生 相互作用的物质，
 目前尚不清楚它的本质，可能是某些未被发现的“新粒子”，在宇宙早期脱离热平衡遗留下来 （thermal relics）,
@@ -292,7 +289,8 @@ $\left(t_{\text {coll }}=2 t_{\mathrm{ta}}  , \theta=2\pi\right)$ :
 而 turn-around 时，全部能量来自势能 $E _{\rm{ta}} = W _{\rm{ta}} =-\frac{GM}{r _{\rm{ta}} }$,
 由能量守恒 得到 $r _{\rm{vir}} =\frac{1}{2} r _{\rm{ta}} $,
 进而
-$\rho _{\rm{vir}} = 8 \rho _{\rm{ta}} $.
+$\rho _{\rm{vir}} = 8 \rho _{\rm{ta}} $. 
+\new{而 $\rho _{\rm{ta}} $ 可以用 SC model 计算得到，这样我们就能解析地得到维里化后的密度。}
 
 利用 $\bar{\rho} \propto a^{-3} \propto t^{-2}$ 和
 $t _{\rm{coll}} = 2 t _{\rm{ta}} $
@@ -320,7 +318,7 @@ $t _{\rm{coll}} = 2 t _{\rm{ta}} $
 
 椭球高密度区的坍缩(Ellipsoidal Collapse)
 与球形高密度区的区别在于三个旋转轴不对称。
-最短轴的方向会先坍缩，由椭球变成饼（sheet/pancake/Zel'dovich pancake），可以用 Zel'dovich 近似 解释。
+最短轴的方向会先坍缩，由椭球变成饼（sheet / pancake / Zel'dovich pancake），可以用 Zel'dovich 近似 解释。
 然后会沿着第二短轴坍缩，变成线型 （filament），
 最后剩下的一个轴坍缩，形成球状的暗物质晕 （halo）。 
 如 \reffig{fig:Ellips_Colla} 所示。
@@ -331,5 +329,9 @@ $t _{\rm{coll}} = 2 t _{\rm{ta}} $
 	\caption{椭球坍缩示意图}
     \label{fig:Ellips_Colla}
 \end{figure}
+
+\input{text/halo_stru}
+
+\input{text/halo_form}
 
 \end{document}
